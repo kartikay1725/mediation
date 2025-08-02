@@ -28,7 +28,7 @@ export async function PATCH(req: NextRequest) {
     }
 
     // Excel file path
-    const filePath = join(process.cwd(), 'exports', 'mediation_cases.xlsx');
+    const filePath = join(process.cwd(), 'public' , 'exports', 'mediation_cases.xlsx');
 
     const workbook = new ExcelJS.Workbook();
     await workbook.xlsx.readFile(filePath);

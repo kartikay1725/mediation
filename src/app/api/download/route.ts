@@ -3,7 +3,7 @@ import { createReadStream } from 'fs';
 import path from 'path';
 //eslint-disable-next-line
 export async function GET(req: NextRequest) {
-  const filePath = path.join(process.cwd(), 'exports', 'mediation_cases.xlsx');
+  const filePath = path.join(process.cwd(), 'public' , 'exports', 'mediation_cases.xlsx');
 
   const stream = createReadStream(filePath);
     //eslint-disable-next-line

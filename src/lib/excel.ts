@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { MediationCase } from '@/types/mediationCase';
 
-const filePath = path.join(process.cwd(), 'exports', 'mediation_cases.xlsx');
+const filePath = path.join(process.cwd(),'public', 'exports', 'mediation_cases.xlsx');
 const SHEET_NAME = 'Cases';
 
 // Ensure directory exists
