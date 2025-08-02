@@ -18,7 +18,7 @@ export async function GET() {
     dayAfter.setDate(dayAfter.getDate() + 1);
 
     const cases = await Case.find({
-      status: 'pending',
+      status: { $in: ['pending', 'Pending'] },
       nextHearingDate: {
         $gte: tomorrow.toISOString(),
         $lt: dayAfter.toISOString(),
