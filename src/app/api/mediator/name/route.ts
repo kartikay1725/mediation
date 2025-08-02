@@ -18,7 +18,6 @@ export async function GET(req: NextRequest) {
     if (!user) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
-    console.log(user.image)
     return NextResponse.json({ mediatorName: user.name  , mediatormail: user.email , mediatorImage: user.image });
   } catch (error) {
     console.error("API error:", error);

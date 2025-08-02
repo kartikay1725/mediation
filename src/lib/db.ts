@@ -9,7 +9,6 @@ const dbConnect = async () => {
   if (mongoose.connection.readyState >= 1) return;
 
   await mongoose.connect(MONGODB_URI);
-  console.log("MongoDB connected"); // Debug log
 };
 
 export default dbConnect;

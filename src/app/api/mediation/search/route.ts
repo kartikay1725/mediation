@@ -7,7 +7,7 @@ export async function GET(request: Request) {
   const query = searchParams.get('query') || '';
   const field = searchParams.get('field') as keyof MediationCase || 'caseNo';
 
-  console.log(`Searching for "${query}" in field "${field}"`);
+ 
 
   try {
     const results = await searchMediationCases(query, field);

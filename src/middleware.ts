@@ -14,16 +14,15 @@ export async function middleware(req: NextRequest) {
 
   const token = req.cookies.get('session')?.value;
   if (!token) {
-    console.log('session cookie not found');
     return NextResponse.redirect(new URL('/login', req.url));
   }
 
   try {
     await jwtVerify(token, secret);
-    console.log('JWT token is valid');
     return NextResponse.next();
-  } catch (err) {
-    console.log('JWT token verification failed:', err);
+  } 
+  //eslint-disable-next-line
+  catch (err) {
     return NextResponse.redirect(new URL('/login', req.url));
   }
 }

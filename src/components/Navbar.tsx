@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { toast } from 'sonner';
+import DeleteCaseBox from "@/components/DeleteCaseBox"; 
 import { Menu, X } from 'lucide-react';
 
 export function Navbar() {
@@ -83,6 +84,7 @@ export function Navbar() {
           <Button variant="ghost" onClick={handleDownload} className="bg-neutral-100 text-black px-4 py-2 rounded-xl text-sm hover:bg-gray-900 hover:text-white">
             Download the sheet
           </Button>
+          <DeleteCaseBox />
         </div>
       </div>
 
@@ -110,6 +112,7 @@ export function Navbar() {
           <Button variant="ghost" onClick={handleDownload} className="w-full text-left">
             Download the sheet
           </Button>
+          <DeleteCaseBox />
         </div>
       )}
     </nav>

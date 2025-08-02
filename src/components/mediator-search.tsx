@@ -19,7 +19,6 @@ export function MediatorSearch() {
       if (!res.ok) throw new Error(data?.error || "Something went wrong");
 
       toast.success("Results found");
-      console.log(data);
     } 
     //eslint-disable-next-line
     catch (err: any) {

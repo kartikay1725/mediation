@@ -58,7 +58,6 @@ export default function MediatorDashboard() {
           setMediatorName(data.mediatorName);
           setMediatormail(data.mediatormail);
           setMediatorImage(data.mediatorImage);
-          console.log(mediatorImage);
         } else {
           toast.error('Mediator not found');
         }
@@ -71,7 +70,6 @@ export default function MediatorDashboard() {
 
     fetchMediatorName();
   },
-  //eslint-disable-next-line
   [searchParams]);
 
   const fetchCases = async () => {

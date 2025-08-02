@@ -17,7 +17,6 @@ const ensureDirectoryExists = () => {
 async function debugExcelStructure() {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log('Excel file does not exist yet');
       return;
     }
 
@@ -25,17 +24,11 @@ async function debugExcelStructure() {
     await workbook.xlsx.readFile(filePath);
     const sheet = workbook.getWorksheet(SHEET_NAME);
     
-    console.log('\n=== EXCEL STRUCTURE DEBUG ===');
-    console.log(`File Path: ${filePath}`);
-    console.log(`Sheet Name: ${sheet?.name || 'Not Found'}`);
-    console.log(`Row Count: ${sheet?.rowCount || 0}`);
     
     sheet?.eachRow({ includeEmpty: true }, (row, rowNumber) => {
       if (rowNumber <= 3) {
-      console.log(`Row ${rowNumber}:`, row.values);
       }
     });
-    console.log('=== END DEBUG ===\n');
   } catch (error) {
     console.error('Debug error:', error);
   }
@@ -100,7 +93,6 @@ export async function searchMediationCases(
     await debugExcelStructure();
 
     if (!fs.existsSync(filePath)) {
-      console.log('Excel file not found');
       return [];
     }
 
@@ -109,7 +101,7 @@ export async function searchMediationCases(
     const sheet = workbook.getWorksheet(SHEET_NAME);
     
     if (!sheet) {
-      console.log('Worksheet not found');
+      console.error('Worksheet not found');
       return [];
     }
 
@@ -131,17 +123,14 @@ export async function searchMediationCases(
         nextHearingDate: row.getCell(8).text?.toString().trim() || ''  // H
       };
 
-      console.log(`Checking row ${rowNumber}:`, caseData);
 
       // Flexible search with null checks
       const fieldValue = caseData[field]?.toLowerCase() || '';
       if (fieldValue.includes(lowerQuery)) {
-        console.log(`Match found in row ${rowNumber}`);
         results.push(caseData);
       }
     });
 
-    console.log(`Search completed. Found ${results.length} results`);
     return results;
   } catch (error) {
     console.error('Error in searchMediationCases:', error);
@@ -160,7 +149,7 @@ export async function updateCaseInExcel(updatedCase: MediationCase) {
     const sheet = workbook.getWorksheet(SHEET_NAME);
     
     if (!sheet) {
-      console.log('Worksheet not found');
+      console.error('Worksheet not found');
       return false;
     }
 
@@ -187,10 +176,9 @@ export async function updateCaseInExcel(updatedCase: MediationCase) {
 
     if (caseUpdated) {
       await workbook.xlsx.writeFile(filePath);
-      console.log(`Case ${updatedCase.caseNo} updated successfully`);
       return true;
     } else {
-      console.log(`Case ${updatedCase.caseNo} not found`);
+      console.error(`Case ${updatedCase.caseNo} not found`);
       return false;
     }
   } catch (error) {

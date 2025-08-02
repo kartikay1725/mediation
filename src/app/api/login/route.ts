@@ -12,14 +12,12 @@ export async function POST(req: NextRequest) {
   const { email, password,  role } = body;
 
   if (!email || !role ) {
-    console.log('Missing fields', { email, role,  });
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
   }
 
   const user = await User.findOne({ email });
   if (!user) {
     
-    console.log('User not found');
     return NextResponse.json({ error: 'User not found' }, { status: 404 });
   }
 
@@ -45,7 +43,6 @@ export async function POST(req: NextRequest) {
   return NextResponse.json({ error: 'Invalid role' }, { status: 400 });
 }
 
-  console.log('creating session for user:', user.email, 'with role:', role);
 
 const token = jwt.sign({ id: user._id.toString(), role }, process.env.JWT_SECRET!, {
   expiresIn: '1d',
