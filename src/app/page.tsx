@@ -33,7 +33,10 @@ export default function HomePage() {
         Resolve Disputes with Peace and Trust
       </p>
       <Button asChild className="mt-10 text-lg px-6 py-3">
-        <Link href="/login">Begin Your Resolution Journey</Link>
+        <Link href="/login">Begin Your Resolution Journey Mediators</Link>
+      </Button>
+      <Button asChild className="mt-10 text-lg px-6 py-3">
+        <Link href="/client/search">Case Search</Link>
       </Button>
     </motion.div>
   </LampContainer>
@@ -49,7 +52,7 @@ export default function HomePage() {
       {/* Team Members Section */}
       <section className="bg-gray-800 py-16">
         <h3 className="text-3xl text-center font-semibold text-white mb-10">
-          Our Trained Mediators
+           Trained Mediators
         </h3>
         <div className="max-w-6xl mx-auto">
           <MediatorsListDemo />
@@ -61,9 +64,9 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
           <div>
             <h4 className="text-xl font-semibold mb-2 text-white">Mediation Office</h4>
-            <p>Address: court complex ambala city Haryana</p>
-            <p>Phone: +91 9876543210</p>
-            <p>Email: mediationoffice@delhicourt.gov.in</p>
+            <p>Address: ADR Centre, Judicial Court Complex, Ambala</p>
+            <p>Phone: 0171-2532142</p>
+            <p>Email: dlsaambala1@gmail.com</p>
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-2 text-white">Site Creator</h4>

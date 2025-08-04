@@ -49,5 +49,5 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Deleted from Excel but DB failed' }, { status: 500 });
   }
 
-  return NextResponse.json({ success: true, message: 'Case deleted from Excel and DB' });
+  return NextResponse.json({ success: true, message: 'Case deleted Successfully' });
 }

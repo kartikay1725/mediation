@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mediation App",
+  title: "Mediation Portal",
   description: "Created for the mediators and the clients to achive a better mediation experience",
 };
 

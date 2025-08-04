@@ -42,7 +42,7 @@ export function Navbar() {
     <nav className="bg-white shadow-sm p-4">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-4">
           <Image
             src="/icons/icon.svg"
             alt="Logo"
@@ -50,7 +50,7 @@ export function Navbar() {
             height={40}
             className="w-10 h-10"
           />
-          <h1 className="text-xl font-bold text-primary">Mediation</h1>
+          <h1 className="text-3xl font-bold text-primary">Mediation</h1>
         </Link>
 
         {/* Mobile menu toggle */}
