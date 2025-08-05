@@ -106,7 +106,7 @@ export default function MediatorsListDemo () {
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Sh. Lalit Sharma",
       designation: "Mediator",
-      src: "/profile/Lalit_sharma.jpg
+      src: "/profile/Lalit_sharma.jpg"
     },
     {
       quote:
