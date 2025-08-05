@@ -19,23 +19,16 @@ export default function MediatorsListDemo () {
     {
       quote:
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
-      name: "Sh. Inderjit Singh Gill",
-      designation: "Mediator",
-      src: "/profile/default-avatar.png",
-    },
-    {
-      quote:
-        "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Sh. Abhishek Kathuria",
       designation: "Mediator",
-      src: "/profile/default-avatar.png",
+      src: "/profile/Abhishek_Kathuria.jpg",
     },
     {
       quote:
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Ms. Hans Kumari",
       designation: "Mediator",
-      src: "/profile/default-avatar.png",
+      src: "/profile/Hans_Kumari.jpg",
     },
     {
       quote:
@@ -49,14 +42,14 @@ export default function MediatorsListDemo () {
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Ms. chander Mohini",
       designation: "Mediator",
-      src: "/profile/default-avatar.png",
+      src: "/profile/Chander_Mohini.jpg",
     },
     {
       quote:
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Sh. Adit Aggarwal",
       designation: "Mediator",
-      src: "/profile/default-avatar.png",
+      src: "/profile/Adit_Aggarwal.jpg",
     },
     {
       quote:
@@ -97,13 +90,6 @@ export default function MediatorsListDemo () {
     {
       quote:
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
-      name: "Sh. Virender Verma",
-      designation: "Mediator",
-      src: "/profile/default-avatar.png",
-    },
-    {
-      quote:
-        "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Ms. jyoti Kaushal",
       designation: "Mediator",
       src: "/profile/Jyoti_Kaushal.jpg",
@@ -113,7 +99,7 @@ export default function MediatorsListDemo () {
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Sh. Bhupesh Bharara",
       designation: "Mediator",
-      src: "/profile/bhupesh_bharara.jpg",
+      src: "/profile/Bhupesh_Bharara.jpg",
     },
     {
       quote:
@@ -128,13 +114,6 @@ export default function MediatorsListDemo () {
       name: "Sh. Ripanjit Singh Soni",
       designation: "Mediator",
       src: "/profile/Ripanjit_Singh_Soni.png",
-    },
-    {
-      quote:
-        "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
-      name: "Sh. Kamal Jassi",
-      designation: "Mediator",
-      src: "/profile/default-avatar.png",
     },
   ];
   return <AnimatedTestimonials testimonials={testimonials} />;
