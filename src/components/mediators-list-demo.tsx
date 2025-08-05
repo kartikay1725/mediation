@@ -85,7 +85,7 @@ export default function MediatorsListDemo () {
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Sh. Ramesh Chand",
       designation: "Mediator",
-      src: "/profile/Ramesh_Chand_Rana.jpg",
+      src: "/profile/Ramesh_chand_Rana.jpg",
     },
     {
       quote:
@@ -106,7 +106,7 @@ export default function MediatorsListDemo () {
         "A mediator doesn’t take sides—only steps forward to bridge the distance between them.",
       name: "Sh. Lalit Sharma",
       designation: "Mediator",
-      src: "/profile/Lalit_Sharma.jpg",
+      src: "/profile/Lalit_sharma.jpg
     },
     {
       quote:
